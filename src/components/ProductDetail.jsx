@@ -55,23 +55,29 @@ function ProductDetail() {
 
 	return (
 		<main>
-			<img src={product.thumbnail} alt={product.title} max-width="100%" />
+			<div className="product-detail">
+				<div className="product-detail-image">
+					<img src={product.thumbnail} alt={product.title} max-width="100%" loading="lazy" />
+				</div>
 
-			<h1>{product.title}</h1>
+					<div className="product-detail-info">
+					<h1>{product.title}</h1>
 
-			<p>{product.description}</p>
+					<p className="product-detail-price">Price: ${product.price}</p>
 
-			<p>Price: ${product.price}</p>
+					<p>{product.description}</p>
 
-			<p>Brand: {product.brand}</p>
+					<p>Brand: {product.brand}</p>
 
-			<p>Category: {product.category}</p>
+					<p>Category: {product.category}</p>
 
-			<p>Rating: {product.rating}</p>
+					<p>Rating: {product.rating}</p>
 
-			<p>Stock: {product.stock}</p>
+					<p>Stock: {product.stock}</p>
 
-			<button onClick={handleAddToCart}>Add to Cart</button>
+					<button onClick={handleAddToCart}>Add to Cart</button>
+				</div>
+			</div>
 		</main>
 	);
 }

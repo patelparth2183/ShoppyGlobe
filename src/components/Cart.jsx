@@ -9,7 +9,7 @@ function Cart() {
 
 	if (cartItems.length === 0) {
 		return (
-			<main>
+			<main className="home-page">
 				<h1>Shopping Cart</h1>
 
 				<p>Your cart is empty.</p>
@@ -20,7 +20,7 @@ function Cart() {
 	}
 
 	return (
-		<main>
+		<main className="home-page">
 			<h1>Shopping Cart</h1>
 
 			<div className="cart-list">
@@ -32,7 +32,7 @@ function Cart() {
 			<div className="cart-summary">
 				<h2>Total: ${totalPrice.toFixed(2)}</h2>
 
-				<Link to="/checkout"><button>Checkout</button></Link>
+				<Link to="/checkout"><button className="checkoutBtn">Checkout</button></Link>
 			</div>
 		</main>
 	);

@@ -26,10 +26,12 @@ function ProductList() {
 	);
 
 	return (
-		<div>
-			<h2>Products</h2>
-
-			<input className="search-input" type="text" placeholder="Search products..." value={searchTerm} onChange={handleSearch} />
+		<>
+			<div className="search-container">
+				<input className="search-input" type="text" placeholder="Search products..." value={searchTerm} onChange={handleSearch} />
+			</div>
+			
+			<h2>Our Products</h2>
 
 			<div className="product-list">
 				{filteredProducts.length > 0 ? (
@@ -40,7 +42,7 @@ function ProductList() {
 					<p>No products found.</p>
 				)}
 			</div>
-		</div>
+		</>
 	);
 }
 

@@ -10,8 +10,8 @@ function ProductItem({ product }) {
 	};
 
 	return (
-		<div>
-			<img src={product.thumbnail} alt={product.title} max-width="100%" />
+		<div className="product-card">
+			<img src={product.thumbnail} alt={product.title} max-width="100%" loading="lazy" />
 
 			<h3>{product.title}</h3>
 
