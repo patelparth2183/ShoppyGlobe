@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider, Outlet, } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./components/Home";
+import ProductDetail from "./components/ProductDetail";
 import Cart from "./components/Cart";
 import Checkout from "./components/Checkout";
 import NotFound from "./components/NotFound";
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
 			{
 				index: true,
 				element: <Home />,
+			},
+			{
+				path: "product/:id",
+				element: <ProductDetail />,
 			},
 			{
 				path: "cart",
