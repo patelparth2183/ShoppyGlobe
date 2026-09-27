@@ -1,10 +1,13 @@
+import ProductList from "./components/ProductList";
+
 function App() {
-	return (
-		<div>
-			<h1>ShoppyGlobe</h1>
-			<p>Welcome to ShoppyGlobe!</p>
-		</div>
-	);
+  return (
+    <div>
+      <h1>ShoppyGlobe</h1>
+
+      <ProductList />
+    </div>
+  );
 }
 
 export default App;
