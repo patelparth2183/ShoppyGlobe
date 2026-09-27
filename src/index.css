@@ -130,3 +130,64 @@ button {
   gap: 20px;
   margin-top: 20px;
 }
+
+/* ---------- Checkout ---------- */
+.checkout-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.checkout-form,
+.order-summary {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+}
+
+.checkout-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.checkout-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.checkout-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.checkout-form button {
+  margin-top: 10px;
+  padding: 12px;
+  background: #222;
+  color: white;
+}
+
+.error-message {
+  margin-bottom: 15px;
+  padding: 10px;
+  background: #ffe5e5;
+  color: #c00;
+  border-radius: 5px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 15px 0;
+}
+
+.summary-item + hr + h3 {
+  margin-top: 15px;
+}
