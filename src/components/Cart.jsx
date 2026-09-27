@@ -9,7 +9,7 @@ function Cart() {
 
 	if (cartItems.length === 0) {
 		return (
-			<main className="home-page">
+			<main className="home-page empty-cart">
 				<h1>Shopping Cart</h1>
 
 				<p>Your cart is empty.</p>

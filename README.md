@@ -1,16 +1,99 @@
-# React + Vite
+# ShoppyGlobe
+ShoppyGlobe is a React-based e-commerce application built as a shopping platform using the DummyJSON Products API. The project includes product browsing, product details, search, a Redux-powered shopping cart, checkout, responsive styling, route-level lazy loading, and lazy-loaded images.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
+- Browse products fetched from the DummyJSON API
+- View individual product details
+- Search products by title
+- Add products to the shopping cart
+- Increase and decrease product quantities
+- Remove products from the cart
+- View cart item count in the header
+- Calculate the cart total
+- Checkout form with customer information
+- Order summary before placing an order
+- Clear the cart after a successful order
+- Navigate back to the home page after placing an order
+- Custom 404 Not Found page
+- Route-level lazy loading using React `lazy()` and `Suspense`
+- Native lazy loading for product images
+- Reusable `useFetch` custom hook
+- Redux Toolkit for cart and search state
+- React Router for application routing
+- Responsive layout for desktop, tablet, and mobile screens
 
-Currently, two official plugins are available:
+## Technologies Used
+- React
+- Vite
+- JavaScript
+- Redux Toolkit
+- React Redux
+- React Router
+- DummyJSON API
+- CSS
+- Git and GitHub
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## GitHub Link
+`https://github.com/patelparth2183/ShoppyGlobe`
 
-## React Compiler
+## API
+Products are fetched from:
+`https://dummyjson.com/products`
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Individual product details are fetched using:
+`https://dummyjson.com/products/{id}`
 
-## Expanding the ESLint configuration
+## How to Run the Project
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 1. Clone the repository
+```bash
+git clone <your-github-repository-url>
+```
+
+### 2. Open the project folder
+```bash
+cd ShoppyGlobe
+```
+
+Replace `ShoppyGlobe` with your actual project folder name if it is different.
+
+### 3. Install dependencies
+```bash
+npm install
+```
+
+### 4. Start the development server
+```bash
+npm run dev
+```
+
+Vite will display a local development URL, usually similar to:
+
+```text
+http://localhost:5173/
+```
+
+Open that URL in your browser.
+
+### 5. Build the project for production
+```bash
+npm run build
+```
+
+### 6. Preview the production build
+```bash
+npm run preview
+```
+
+## Shopping Flow
+1. Open the Home page.
+2. Browse or search for products.
+3. Open a product to view its details.
+4. Add the product to the cart.
+5. Open the Cart page.
+6. Change quantities or remove products.
+7. Continue to Checkout.
+8. Enter the required customer information.
+9. Review the order summary.
+10. Place the order.
+11. The cart is cleared and the application redirects to the Home page.
