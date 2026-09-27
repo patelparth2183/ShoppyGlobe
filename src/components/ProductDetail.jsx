@@ -54,7 +54,7 @@ function ProductDetail() {
 	};
 
 	return (
-		<main>
+		<main className="home-page">
 			<div className="product-detail">
 				<div className="product-detail-image">
 					<img src={product.thumbnail} alt={product.title} max-width="100%" loading="lazy" />

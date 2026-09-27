@@ -1,25 +1,24 @@
 import { useEffect, useState } from "react";
 
-function useFetchProducts() {
-	const [products, setProducts] = useState([]);
+function useFetch(url) {
+	const [data, setData] = useState(null);
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState("");
 
 	useEffect(() => {
-		const fetchProducts = async () => {
+		const fetchData = async () => {
 			try {
 				setLoading(true);
 				setError("");
 
-				const response = await fetch("https://dummyjson.com/products");
+				const response = await fetch(url);
 
 				if (!response.ok) {
-					throw new Error("Failed to fetch products");
+					throw new Error("Failed to fetch data");
 				}
 
-				const data = await response.json();
-
-				setProducts(data.products);
+				const result = await response.json();
+				setData(result);
 			} catch (error) {
 				setError(error.message);
 			} finally {
@@ -27,14 +26,14 @@ function useFetchProducts() {
 			}
 		};
 
-		fetchProducts();
-	}, []);
+		fetchData();
+	}, [url]);
 
 	return {
-		products,
+		data,
 		loading,
 		error,
 	};
 }
 
-export default useFetchProducts;
+export default useFetch;

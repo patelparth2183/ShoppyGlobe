@@ -47,7 +47,7 @@ function Checkout() {
 
 	if (cartItems.length === 0) {
 		return (
-			<main>
+			<main className="home-page">
 				<h1>Checkout</h1>
 				<p>Your cart is empty.</p>
 			</main>
@@ -55,7 +55,7 @@ function Checkout() {
 	}
 
 	return (
-		<main>
+		<main className="home-page">
 			<h1>Checkout</h1>
 
 			<div className="checkout-container">

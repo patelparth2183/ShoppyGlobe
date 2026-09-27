@@ -1,11 +1,13 @@
 import { useDispatch, useSelector } from "react-redux";
-import useFetchProducts from "../hooks/useFetchProducts";
+import useFetch from "../hooks/useFetchProducts";
 import ProductItem from "./ProductItem";
 import { setSearchTerm } from "../redux/cartSlice";
 import { selectSearchTerm } from "../redux/selectors";
 
 function ProductList() {
-	const { products, loading, error } = useFetchProducts();
+	const { data, loading, error } = useFetch("https://dummyjson.com/products");
+
+	const products = data?.products || [];
 
 	const dispatch = useDispatch();
 
