@@ -1,19 +1,21 @@
+import { lazy, Suspense } from "react";
 import { createBrowserRouter, RouterProvider, Outlet, } from "react-router-dom";
 import Header from "./components/Header";
-import Home from "./components/Home";
-import ProductDetail from "./components/ProductDetail";
-import Cart from "./components/Cart";
-import Checkout from "./components/Checkout";
-import NotFound from "./components/NotFound";
+
+const Home = lazy(() => import("./components/Home"));
+const ProductDetail = lazy(() => import("./components/ProductDetail"));
+const Cart = lazy(() => import("./components/Cart"));
+const Checkout = lazy(() => import("./components/Checkout"));
+const NotFound = lazy(() => import("./components/NotFound"));
 
 function Layout() {
 	return (
 		<>
 			<Header />
 
-			<div className="container">
+			<Suspense fallback={<p>Loading page...</p>}>
 				<Outlet />
-			</div>
+			</Suspense>
 		</>
 	);
 }
