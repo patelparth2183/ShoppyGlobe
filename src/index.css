@@ -41,6 +41,11 @@ a {
   gap: 20px;
 }
 
+.nav a {
+  display: inline-block;
+  line-height: 22px;
+}
+
 .nav a:hover {
   color: #ffcc00;
 }
